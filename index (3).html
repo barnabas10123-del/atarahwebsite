@@ -1,0 +1,1499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ATARAH 2026 — Crowned With Purpose | CSI Shanthi Church Youth Fellowship</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400;600;700;900&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+/* ═══════════════════════════════════════════════
+   VARIABLES & RESET
+═══════════════════════════════════════════════ */
+:root {
+  --forest:   #0d2618;
+  --forest2:  #0a1f12;
+  --forest3:  #061510;
+  --green-mid:#1a3d22;
+  --gold:     #c9a84c;
+  --gold2:    #e8c96a;
+  --gold3:    #f5e0a0;
+  --gold-dim: #7a6028;
+  --crimson:  #6b1a1a;
+  --crimson2: #8b2020;
+  --cream:    #f0e4c8;
+  --muted:    #8a9e88;
+  --border:   rgba(201,168,76,0.28);
+  --shadow:   rgba(0,0,0,0.7);
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--forest3);
+  color: var(--cream);
+  font-family: 'EB Garamond', Georgia, serif;
+  font-size: 17px;
+  overflow-x: hidden;
+  cursor: default;
+}
+
+/* ═══════════════════════════════════════════════
+   TEXTURE OVERLAYS
+═══════════════════════════════════════════════ */
+body::before {
+  content: '';
+  position: fixed; inset: 0; z-index: 0; pointer-events: none;
+  background:
+    radial-gradient(ellipse 80% 60% at 20% 30%, rgba(13,38,24,0.6) 0%, transparent 70%),
+    radial-gradient(ellipse 60% 80% at 80% 70%, rgba(107,26,26,0.15) 0%, transparent 60%);
+}
+body::after {
+  content: '';
+  position: fixed; inset: 0; z-index: 1; pointer-events: none;
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.06'/%3E%3C/svg%3E");
+  opacity: 0.5;
+}
+
+/* ═══════════════════════════════════════════════
+   NAV
+═══════════════════════════════════════════════ */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 5vw;
+  height: 64px;
+  background: linear-gradient(to bottom, rgba(6,21,16,0.97) 0%, rgba(6,21,16,0) 100%);
+  border-bottom: 1px solid rgba(201,168,76,0.1);
+}
+.nav-brand {
+  font-family: 'Cinzel Decorative', serif;
+  font-size: 1.25rem; font-weight: 900;
+  background: linear-gradient(135deg, var(--gold3), var(--gold), var(--gold-dim));
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  letter-spacing: 0.1em;
+}
+.nav-links { display: flex; gap: 0; list-style: none; }
+.nav-links a {
+  display: block; padding: 0.5rem 1.1rem;
+  font-family: 'Cinzel', serif; font-size: 0.68rem;
+  letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--muted); text-decoration: none;
+  transition: color 0.3s;
+  border-left: 1px solid transparent;
+}
+.nav-links a:hover { color: var(--gold2); }
+.nav-cta {
+  font-family: 'Cinzel', serif; font-size: 0.68rem;
+  letter-spacing: 0.15em; text-transform: uppercase;
+  color: var(--forest3); background: linear-gradient(135deg, var(--gold2), var(--gold));
+  padding: 0.45rem 1.2rem; text-decoration: none;
+  transition: opacity 0.3s;
+}
+.nav-cta:hover { opacity: 0.85; }
+.nav-instagram {
+  display: flex; align-items: center; gap: 0.4rem;
+  padding: 0.45rem 0.9rem;
+  color: var(--gold); text-decoration: none;
+  font-size: 1.1rem; transition: color 0.3s, transform 0.3s;
+}
+.nav-instagram:hover { color: var(--gold2); transform: scale(1.15); }
+.footer-social { margin: 1rem 0 0.5rem; }
+.footer-social a {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  color: var(--gold); text-decoration: none;
+  font-family: 'Cinzel', serif; font-size: 0.72rem;
+  letter-spacing: 0.2em; text-transform: uppercase;
+  border: 1px solid var(--gold-dim); padding: 0.5rem 1.2rem;
+  transition: all 0.3s;
+}
+.footer-social a:hover { color: var(--gold2); border-color: var(--gold); background: rgba(201,168,76,0.07); }
+
+/* ═══════════════════════════════════════════════
+   HERO
+═══════════════════════════════════════════════ */
+#hero {
+  position: relative; min-height: 100vh;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  text-align: center;
+  padding: 5rem 2rem 4rem;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse 100% 80% at 50% 0%, rgba(26,61,34,0.6) 0%, transparent 55%),
+    radial-gradient(ellipse 60% 40% at 10% 80%, rgba(107,26,26,0.3) 0%, transparent 50%),
+    radial-gradient(ellipse 60% 40% at 90% 80%, rgba(107,26,26,0.25) 0%, transparent 50%),
+    var(--forest2);
+  z-index: 2;
+}
+
+/* gold corner ornaments via SVG */
+.corner { position: absolute; width: 140px; height: 140px; z-index: 3; }
+.corner.tl { top: 0; left: 0; }
+.corner.tr { top: 0; right: 0; transform: scaleX(-1); }
+.corner.bl { bottom: 0; left: 0; transform: scaleY(-1); }
+.corner.br { bottom: 0; right: 0; transform: scale(-1); }
+
+/* horizontal rule ornaments */
+.hero-hr {
+  width: min(600px, 90vw); height: 1px;
+  background: linear-gradient(to right, transparent, var(--gold), transparent);
+  position: relative; margin: 0.8rem auto;
+}
+.hero-hr::before, .hero-hr::after {
+  content: '◆';
+  position: absolute; top: 50%; transform: translateY(-50%);
+  color: var(--gold); font-size: 0.5rem;
+}
+.hero-hr::before { left: 0; }
+.hero-hr::after  { right: 0; }
+
+.hero-kicker {
+  font-family: 'Cinzel', serif; font-size: 0.72rem;
+  letter-spacing: 0.42em; text-transform: uppercase;
+  color: var(--gold); margin-bottom: 0.5rem;
+  animation: fadeSlideUp 1s 0.2s both;
+}
+.hero-subtitle-top {
+  font-family: 'Cinzel', serif; font-size: clamp(0.85rem, 2vw, 1.1rem);
+  letter-spacing: 0.25em; color: var(--gold2);
+  margin-bottom: 0.6rem;
+  animation: fadeSlideUp 1s 0.4s both;
+}
+.hero-crown {
+  font-size: clamp(3rem, 8vw, 5rem); line-height: 1;
+  margin-bottom: 0.2rem;
+  filter: drop-shadow(0 0 30px rgba(201,168,76,0.7)) drop-shadow(0 0 60px rgba(201,168,76,0.3));
+  animation: fadeSlideUp 1s 0.5s both, crownFloat 5s 1.5s ease-in-out infinite;
+}
+@keyframes crownFloat {
+  0%,100% { transform: translateY(0); filter: drop-shadow(0 0 30px rgba(201,168,76,0.7)) drop-shadow(0 0 60px rgba(201,168,76,0.3)); }
+  50% { transform: translateY(-12px); filter: drop-shadow(0 8px 40px rgba(201,168,76,0.9)) drop-shadow(0 0 80px rgba(201,168,76,0.4)); }
+}
+.hero-title {
+  font-family: 'Cinzel Decorative', serif;
+  font-size: clamp(4.5rem, 16vw, 10rem);
+  font-weight: 900; line-height: 0.9;
+  background: linear-gradient(160deg, var(--gold3) 0%, var(--gold2) 35%, var(--gold) 65%, var(--gold-dim) 100%);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  letter-spacing: 0.04em;
+  position: relative;
+  animation: fadeSlideUp 1s 0.6s both;
+  text-shadow: none;
+}
+.hero-title-glow {
+  position: absolute; inset: 0;
+  background: linear-gradient(160deg, var(--gold3), var(--gold));
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  filter: blur(22px); opacity: 0.35; z-index: -1;
+  font-family: 'Cinzel Decorative', serif;
+  font-size: clamp(4.5rem, 16vw, 10rem);
+  font-weight: 900; line-height: 0.9;
+}
+.hero-theme {
+  font-family: 'Cinzel', serif;
+  font-size: clamp(1rem, 3.5vw, 1.8rem);
+  letter-spacing: 0.2em; color: var(--gold2);
+  margin-top: 0.4rem;
+  animation: fadeSlideUp 1s 0.8s both;
+}
+.hero-date-venue {
+  display: flex; gap: 3rem; justify-content: center; flex-wrap: wrap;
+  margin: 1.8rem 0 2.2rem;
+  animation: fadeSlideUp 1s 1s both;
+}
+.dv-item { text-align: center; }
+.dv-label {
+  font-family: 'Cinzel', serif; font-size: 0.6rem;
+  letter-spacing: 0.3em; color: var(--gold); text-transform: uppercase;
+  margin-bottom: 0.3rem;
+}
+.dv-val {
+  font-family: 'Cinzel', serif; font-size: clamp(0.9rem, 2vw, 1.1rem);
+  color: var(--cream); font-weight: 600; letter-spacing: 0.05em;
+}
+.hero-btn-row {
+  display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;
+  animation: fadeSlideUp 1s 1.2s both;
+}
+.btn-primary {
+  font-family: 'Cinzel', serif; font-size: 0.72rem;
+  letter-spacing: 0.2em; text-transform: uppercase;
+  padding: 0.85rem 2.5rem;
+  background: linear-gradient(135deg, var(--gold2), var(--gold));
+  color: var(--forest3); text-decoration: none;
+  border: none; cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 4px 20px rgba(201,168,76,0.4);
+}
+.btn-primary:hover { transform: translateY(-3px); box-shadow: 0 10px 35px rgba(201,168,76,0.5); }
+.btn-outline {
+  font-family: 'Cinzel', serif; font-size: 0.72rem;
+  letter-spacing: 0.2em; text-transform: uppercase;
+  padding: 0.85rem 2.5rem;
+  border: 1px solid var(--gold);
+  color: var(--gold2); text-decoration: none;
+  background: rgba(201,168,76,0.07);
+  transition: all 0.3s;
+}
+.btn-outline:hover { background: rgba(201,168,76,0.15); transform: translateY(-3px); }
+
+@keyframes fadeSlideUp {
+  from { opacity:0; transform: translateY(32px); }
+  to   { opacity:1; transform: translateY(0); }
+}
+
+/* ═══════════════════════════════════════════════
+   SECTIONS SHARED
+═══════════════════════════════════════════════ */
+section {
+  position: relative; z-index: 2;
+  padding: 5.5rem 6vw;
+}
+.sec-label {
+  font-family: 'Cinzel', serif; font-size: 0.62rem;
+  letter-spacing: 0.38em; text-transform: uppercase;
+  color: var(--gold); text-align: center; margin-bottom: 0.6rem;
+}
+.sec-title {
+  font-family: 'Cinzel Decorative', serif;
+  font-size: clamp(1.6rem, 4vw, 2.8rem);
+  background: linear-gradient(135deg, var(--gold3), var(--gold2), var(--gold));
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  text-align: center; margin-bottom: 0.8rem; line-height: 1.15;
+}
+.sec-rule {
+  width: 160px; height: 1px; margin: 0 auto 2.8rem;
+  background: linear-gradient(to right, transparent, var(--gold), transparent);
+  position: relative;
+}
+.sec-rule::before {
+  content: '✦'; position: absolute; left: 50%; top: 50%;
+  transform: translate(-50%,-50%);
+  color: var(--gold); font-size: 0.55rem;
+  background: var(--forest3); padding: 0 6px;
+}
+.sec-desc {
+  text-align: center; max-width: 640px; margin: 0 auto 2.5rem;
+  color: var(--muted); line-height: 1.85; font-size: 1rem;
+}
+
+/* reveal animation */
+.reveal { opacity:0; transform: translateY(28px); transition: opacity .65s ease, transform .65s ease; }
+.reveal.in  { opacity:1; transform: none; }
+.reveal-d1 { transition-delay: 0.08s; }
+.reveal-d2 { transition-delay: 0.16s; }
+.reveal-d3 { transition-delay: 0.24s; }
+.reveal-d4 { transition-delay: 0.32s; }
+
+/* ═══════════════════════════════════════════════
+   ABOUT
+═══════════════════════════════════════════════ */
+#about {
+  background:
+    radial-gradient(ellipse 70% 50% at 50% 0%, rgba(26,61,34,0.4) 0%, transparent 60%),
+    var(--forest2);
+  border-top: 1px solid var(--border);
+}
+.about-inner {
+  max-width: 900px; margin: 0 auto;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 3.5rem; align-items: start;
+}
+.about-text p { color: rgba(240,228,200,0.8); line-height: 1.9; margin-bottom: 1rem; font-size: 1.02rem; }
+.about-text strong { color: var(--gold2); font-weight: 500; }
+.about-blockquote {
+  border-left: 2px solid var(--gold);
+  padding: 0.8rem 1.4rem;
+  margin: 1.5rem 0;
+  font-style: italic; font-size: 1.1rem;
+  color: var(--gold2); line-height: 1.7;
+  background: rgba(201,168,76,0.05);
+}
+.about-rules {
+  background: var(--forest3);
+  border: 1px solid var(--border);
+  padding: 1.8rem;
+}
+.about-rules h3 {
+  font-family: 'Cinzel', serif; font-size: 0.8rem;
+  letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--gold); margin-bottom: 1.2rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 1px solid var(--border);
+}
+.rule-list { list-style: none; }
+.rule-list li {
+  display: flex; gap: 0.8rem; align-items: flex-start;
+  padding: 0.55rem 0;
+  border-bottom: 1px solid rgba(201,168,76,0.08);
+  color: rgba(240,228,200,0.75); font-size: 0.92rem; line-height: 1.65;
+}
+.rule-list li:last-child { border-bottom: none; }
+.rule-list li::before { content: '◆'; color: var(--gold); font-size: 0.5rem; margin-top: 0.45rem; min-width: 0.8rem; }
+
+/* ═══════════════════════════════════════════════
+   EVENTS GRID
+═══════════════════════════════════════════════ */
+#events {
+  background: var(--forest3);
+  border-top: 1px solid var(--border);
+}
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.4rem; max-width: 1200px; margin: 0 auto;
+}
+.event-card {
+  background: var(--forest2);
+  border: 1px solid var(--border);
+  padding: 2rem 1.8rem;
+  position: relative; overflow: hidden;
+  transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+}
+.event-card::before {
+  content: '';
+  position: absolute; top: 0; left: 0; right: 0; height: 2px;
+  background: linear-gradient(to right, transparent, var(--gold), transparent);
+  opacity: 0; transition: opacity 0.3s;
+}
+.event-card::after {
+  content: '';
+  position: absolute; bottom: 0; right: 0; width: 80px; height: 80px;
+  background: radial-gradient(ellipse at bottom right, rgba(201,168,76,0.08), transparent 70%);
+  pointer-events: none;
+}
+.event-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(201,168,76,0.55);
+  box-shadow: 0 18px 45px rgba(0,0,0,0.5), 0 0 25px rgba(201,168,76,0.07);
+}
+.event-card:hover::before { opacity: 1; }
+
+.ec-icon { font-size: 2rem; margin-bottom: 0.8rem; display: block; }
+.ec-tag {
+  font-family: 'Cinzel', serif; font-size: 0.58rem;
+  letter-spacing: 0.28em; text-transform: uppercase;
+  color: var(--gold); margin-bottom: 0.45rem;
+}
+.ec-title {
+  font-family: 'Cinzel', serif; font-size: 1rem; font-weight: 700;
+  color: var(--gold2); margin-bottom: 0.8rem; line-height: 1.3;
+}
+.ec-desc { color: var(--muted); font-size: 0.88rem; line-height: 1.7; }
+.ec-rules { margin-top: 1rem; }
+.ec-prize-row {
+  display: flex; align-items: center; gap: 0.6rem;
+  margin: 0.8rem 0 0;
+  padding: 0.55rem 0.8rem;
+  background: rgba(201,168,76,0.06);
+  border: 1px solid rgba(201,168,76,0.2);
+  flex-wrap: wrap;
+}
+.ec-prize-item {
+  font-family: 'Cinzel', serif; font-size: 0.72rem;
+  letter-spacing: 0.08em; color: var(--gold2);
+}
+.ec-reg-fee {
+  font-family: 'Cinzel', serif; font-size: 0.65rem;
+  letter-spacing: 0.08em; color: var(--muted);
+}
+.ec-prize-sep { color: var(--gold-dim); font-size: 0.7rem; }
+.ec-rules-toggle {
+  font-family: 'Cinzel', serif; font-size: 0.6rem;
+  letter-spacing: 0.15em; text-transform: uppercase;
+  color: var(--gold); cursor: pointer; border: none;
+  background: none; padding: 0.4rem 0;
+  border-top: 1px solid var(--border); width: 100%;
+  text-align: left; display: flex; justify-content: space-between;
+  align-items: center; transition: color 0.2s;
+}
+.ec-rules-toggle:hover { color: var(--gold2); }
+.ec-rules-body {
+  display: none; padding-top: 0.8rem;
+  color: rgba(240,228,200,0.7); font-size: 0.84rem; line-height: 1.7;
+}
+.ec-rules-body.open { display: block; }
+.ec-rules-body ul { padding-left: 1.2rem; }
+.ec-rules-body li { margin-bottom: 0.4rem; }
+.ec-rules-body li::marker { color: var(--gold); }
+.ec-meta {
+  display: flex; gap: 0.5rem; flex-wrap: wrap; margin-top: 1rem;
+}
+.ec-badge {
+  font-family: 'Cinzel', serif; font-size: 0.58rem;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  padding: 0.25rem 0.7rem;
+  border: 1px solid rgba(201,168,76,0.35);
+  color: var(--gold);
+}
+
+/* ═══════════════════════════════════════════════
+   THEME SECTION
+═══════════════════════════════════════════════ */
+#theme {
+  background:
+    radial-gradient(ellipse 80% 60% at 50% 50%, rgba(26,61,34,0.5) 0%, transparent 70%),
+    var(--forest2);
+  border-top: 1px solid var(--border);
+  text-align: center;
+}
+.theme-frame {
+  max-width: 720px; margin: 0 auto;
+  border: 1px solid var(--border);
+  padding: 3rem 3.5rem;
+  position: relative;
+  background: rgba(13,38,24,0.5);
+}
+.theme-frame::before, .theme-frame::after {
+  content: '';
+  position: absolute; width: 40px; height: 40px;
+}
+.theme-frame::before { top: -1px; left: -1px; border-top: 2px solid var(--gold); border-left: 2px solid var(--gold); }
+.theme-frame::after  { bottom: -1px; right: -1px; border-bottom: 2px solid var(--gold); border-right: 2px solid var(--gold); }
+.theme-word {
+  font-family: 'Cinzel Decorative', serif;
+  font-size: clamp(2rem, 7vw, 4.5rem); font-weight: 900;
+  background: linear-gradient(160deg, var(--gold3), var(--gold2), var(--gold));
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  margin: 0.5rem 0 1rem;
+  filter: drop-shadow(0 0 30px rgba(201,168,76,0.4));
+}
+.theme-meaning {
+  font-family: 'Cinzel', serif; font-size: 0.78rem;
+  letter-spacing: 0.3em; text-transform: uppercase;
+  color: var(--gold); margin-bottom: 1.5rem;
+}
+.theme-verse {
+  font-style: italic; font-size: 1.1rem; line-height: 1.8;
+  color: var(--cream); margin-bottom: 0.5rem;
+}
+.theme-verse-ref {
+  font-family: 'Cinzel', serif; font-size: 0.72rem;
+  letter-spacing: 0.2em; color: var(--gold);
+}
+.theme-desc {
+  margin-top: 1.5rem; color: var(--muted);
+  font-size: 0.95rem; line-height: 1.85;
+}
+
+/* ═══════════════════════════════════════════════
+   PRIZES
+═══════════════════════════════════════════════ */
+#prizes {
+  background: var(--forest3);
+  border-top: 1px solid var(--border);
+  text-align: center;
+}
+.prizes-wrap {
+  display: flex; gap: 1.5rem; justify-content: center;
+  flex-wrap: wrap; max-width: 800px; margin: 0 auto;
+}
+.prize-card {
+  background: var(--forest2);
+  border: 1px solid var(--border);
+  padding: 2.5rem 2rem; min-width: 200px; flex: 1; max-width: 230px;
+  text-align: center; position: relative; overflow: hidden;
+  transition: transform 0.3s, border-color 0.3s;
+}
+.prize-card.winner {
+  border-color: rgba(201,168,76,0.55);
+  background: linear-gradient(180deg, rgba(201,168,76,0.06) 0%, var(--forest2) 100%);
+}
+.prize-card.winner::before {
+  content: 'OVERALL CHAMPION';
+  position: absolute; top: 0; left: 0; right: 0;
+  background: linear-gradient(135deg, var(--gold2), var(--gold));
+  color: var(--forest3);
+  font-family: 'Cinzel', serif; font-size: 0.55rem;
+  letter-spacing: 0.2em; padding: 0.35rem;
+  text-transform: uppercase;
+}
+.prize-card:hover { transform: translateY(-6px); border-color: var(--gold); }
+.prize-icon { font-size: 2.5rem; margin: 0.8rem 0 0.5rem; display: block; }
+.prize-amount {
+  font-family: 'Cinzel Decorative', serif;
+  font-size: 1.6rem; margin-bottom: 0.3rem;
+}
+.prize-amount.g { background: linear-gradient(135deg, #FFE44D, #B8860B); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.prize-amount.s { background: linear-gradient(135deg, #E0E0E0, #999); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.prize-label {
+  font-family: 'Cinzel', serif; font-size: 0.65rem;
+  letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--muted); margin-bottom: 0.8rem;
+}
+.prize-desc { color: rgba(240,228,200,0.65); font-size: 0.84rem; line-height: 1.6; }
+.prize-note {
+  margin-top: 2.5rem; color: var(--muted); font-size: 0.88rem;
+  font-style: italic;
+}
+.prize-note strong { color: var(--gold2); font-style: normal; }
+
+/* ═══════════════════════════════════════════════
+   IMPORTANT DATES
+═══════════════════════════════════════════════ */
+#dates {
+  background: var(--forest2);
+  border-top: 1px solid var(--border);
+}
+.dates-inner { max-width: 700px; margin: 0 auto; }
+.timeline { position: relative; padding-left: 2rem; }
+.timeline::before {
+  content: '';
+  position: absolute; left: 0; top: 0; bottom: 0; width: 1px;
+  background: linear-gradient(to bottom, transparent, var(--gold), transparent);
+}
+.tl-item {
+  position: relative; padding: 0 0 2.2rem 2rem;
+}
+.tl-item:last-child { padding-bottom: 0; }
+.tl-dot {
+  position: absolute; left: -5px; top: 4px;
+  width: 11px; height: 11px;
+  background: var(--gold); border-radius: 50%;
+  box-shadow: 0 0 12px rgba(201,168,76,0.6);
+}
+.tl-date {
+  font-family: 'Cinzel', serif; font-size: 0.65rem;
+  letter-spacing: 0.25em; text-transform: uppercase;
+  color: var(--gold); margin-bottom: 0.3rem;
+}
+.tl-title {
+  font-family: 'Cinzel', serif; font-size: 1rem; font-weight: 600;
+  color: var(--cream); margin-bottom: 0.3rem;
+}
+.tl-desc { color: var(--muted); font-size: 0.88rem; line-height: 1.65; }
+
+/* ═══════════════════════════════════════════════
+   CONTACT / REGISTER
+═══════════════════════════════════════════════ */
+#contact {
+  background:
+    radial-gradient(ellipse 70% 50% at 50% 0%, rgba(107,26,26,0.2) 0%, transparent 60%),
+    var(--forest3);
+  border-top: 1px solid var(--border);
+  text-align: center;
+}
+.contact-inner { max-width: 820px; margin: 0 auto; }
+.contact-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 1.2rem; margin: 0 auto 2.5rem;
+}
+.contact-card {
+  background: var(--forest2);
+  border: 1px solid var(--border);
+  padding: 1.8rem 1.4rem; text-align: center;
+  transition: border-color 0.3s, transform 0.3s;
+}
+.contact-card:hover { border-color: var(--gold); transform: translateY(-4px); }
+.cc-icon { font-size: 1.5rem; margin-bottom: 0.6rem; display: block; }
+.cc-name {
+  font-family: 'Cinzel', serif; font-size: 0.75rem;
+  letter-spacing: 0.1em; color: var(--gold2);
+  margin-bottom: 0.4rem; font-weight: 600;
+}
+.cc-phone {
+  color: var(--cream); font-size: 0.9rem; line-height: 1.5;
+}
+.cc-phone a { color: var(--cream); text-decoration: none; }
+.cc-phone a:hover { color: var(--gold2); }
+
+.email-row {
+  margin: 1.5rem auto 2rem;
+  font-size: 0.95rem; color: var(--muted);
+}
+.email-row a {
+  color: var(--gold2); text-decoration: none;
+  font-family: 'Cinzel', serif; letter-spacing: 0.1em;
+}
+.email-row a:hover { text-decoration: underline; }
+
+.registration-note {
+  background: var(--forest2); border: 1px solid var(--border);
+  padding: 1.8rem; max-width: 600px; margin: 0 auto;
+  font-size: 0.92rem; color: var(--muted); line-height: 1.8;
+}
+.registration-note strong { color: var(--gold2); }
+
+/* ═══════════════════════════════════════════════
+   FOOTER
+═══════════════════════════════════════════════ */
+footer {
+  position: relative; z-index: 2;
+  background: var(--forest3);
+  border-top: 1px solid var(--border);
+  padding: 3rem 5vw 2rem;
+  text-align: center;
+}
+.footer-logo {
+  font-family: 'Cinzel Decorative', serif; font-size: 1.5rem; font-weight: 900;
+  background: linear-gradient(135deg, var(--gold3), var(--gold));
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  margin-bottom: 0.4rem;
+}
+.footer-tagline {
+  font-family: 'Cinzel', serif; font-size: 0.65rem;
+  letter-spacing: 0.3em; text-transform: uppercase;
+  color: var(--gold); margin-bottom: 1.5rem;
+}
+.footer-hr {
+  width: 200px; height: 1px; margin: 0 auto 1.5rem;
+  background: linear-gradient(to right, transparent, var(--gold-dim), transparent);
+}
+.footer-copy { color: var(--muted); font-size: 0.82rem; line-height: 1.8; }
+
+/* ═══════════════════════════════════════════════
+   RESPONSIVE
+═══════════════════════════════════════════════ */
+@media (max-width: 820px) {
+  nav { padding: 0 4vw; }
+  .nav-links, .nav-cta { display: none; }
+  .about-inner { grid-template-columns: 1fr; }
+  .contact-grid { grid-template-columns: 1fr; max-width: 340px; }
+  .theme-frame { padding: 2rem 1.5rem; }
+  section { padding: 4rem 5vw; }
+}
+@media (max-width: 500px) {
+  .prizes-wrap { flex-direction: column; align-items: center; }
+  .prize-card { max-width: 280px; width: 100%; }
+  .hero-date-venue { gap: 1.5rem; }
+}
+
+.sched-row {
+  display: flex; gap: 0.6rem; align-items: baseline;
+  padding: 0.2rem 0;
+  border-bottom: 1px solid rgba(201,168,76,0.06);
+  font-size: 0.82rem;
+}
+.sched-time {
+  font-family: 'Cinzel', serif; font-size: 0.65rem;
+  color: var(--gold); letter-spacing: 0.05em; min-width: 4.5rem;
+  white-space: nowrap;
+}
+.sched-ev { color: rgba(240,228,200,0.7); }
+
+/* ═══════════════════════════════════════════════
+   SCROLLBAR
+═══════════════════════════════════════════════ */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--forest3); }
+::-webkit-scrollbar-thumb { background: var(--gold-dim); }
+
+/* ═══════════════════════════════════════════════
+   SCORING TABLE
+═══════════════════════════════════════════════ */
+.scoring-title {
+  font-family: 'Cinzel', serif; font-size: 0.72rem;
+  letter-spacing: 0.3em; text-transform: uppercase;
+  color: var(--gold); text-align: center;
+  margin-bottom: 1.2rem;
+}
+.scoring-table {
+  width: 100%; border-collapse: collapse;
+  font-size: 0.88rem;
+}
+.scoring-table thead tr {
+  background: rgba(201,168,76,0.12);
+}
+.scoring-table th {
+  font-family: 'Cinzel', serif; font-size: 0.65rem;
+  letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--gold); padding: 0.7rem 1rem; text-align: left;
+  border-bottom: 1px solid var(--border);
+}
+.scoring-table td {
+  padding: 0.6rem 1rem; border-bottom: 1px solid rgba(201,168,76,0.07);
+  color: rgba(240,228,200,0.75); line-height: 1.5;
+}
+.scoring-table tr:hover td { background: rgba(201,168,76,0.04); }
+.scoring-table td:not(:first-child) {
+  color: var(--gold2); font-family: 'Cinzel', serif;
+  font-size: 0.8rem; letter-spacing: 0.1em;
+}
+.brownie-row td {
+  text-align: center; color: var(--gold) !important;
+  font-family: 'Cinzel', serif !important; font-size: 0.72rem !important;
+  letter-spacing: 0.2em; padding: 0.9rem 1rem !important;
+  border-top: 1px solid var(--border);
+  background: rgba(201,168,76,0.05);
+}
+
+/* ═══════════════════════════════════════════════
+   PER-EVENT PRIZES GRID
+═══════════════════════════════════════════════ */
+.event-prizes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1rem; margin-top: 1rem;
+}
+.ep-card {
+  background: var(--forest2);
+  border: 1px solid var(--border);
+  padding: 1.3rem 1.4rem;
+  transition: border-color 0.3s, transform 0.3s;
+}
+.ep-card:hover { border-color: rgba(201,168,76,0.5); transform: translateY(-3px); }
+.ep-card.ep-featured {
+  border-color: rgba(201,168,76,0.45);
+  background: linear-gradient(180deg, rgba(201,168,76,0.05) 0%, var(--forest2) 100%);
+}
+.ep-event {
+  font-family: 'Cinzel', serif; font-size: 0.72rem;
+  letter-spacing: 0.1em; color: var(--gold2);
+  margin-bottom: 0.8rem; padding-bottom: 0.6rem;
+  border-bottom: 1px solid var(--border);
+}
+.ep-row {
+  display: flex; justify-content: space-between;
+  align-items: center; padding: 0.3rem 0;
+}
+.ep-place {
+  font-family: 'Cinzel', serif; font-size: 0.65rem;
+  letter-spacing: 0.1em; text-transform: uppercase;
+}
+.gold-place { color: #e8c96a; }
+.silver-place { color: #b0b8bc; }
+.ep-amt {
+  font-family: 'Cinzel Decorative', serif;
+  font-size: 0.9rem; color: var(--cream);
+}
+</style>
+</head>
+<body>
+
+<!-- ═══ CORNER SVG ORNAMENTS ═══ -->
+<svg style="display:none">
+  <defs>
+    <symbol id="corner-svg" viewBox="0 0 140 140">
+      <path d="M5 5 L5 60" stroke="#c9a84c" stroke-width="1.5" fill="none" opacity="0.7"/>
+      <path d="M5 5 L60 5" stroke="#c9a84c" stroke-width="1.5" fill="none" opacity="0.7"/>
+      <path d="M5 5 C5 5 30 10 35 35 C40 60 60 65 60 65" stroke="#c9a84c" stroke-width="1" fill="none" opacity="0.5"/>
+      <circle cx="5" cy="5" r="3" fill="#c9a84c" opacity="0.8"/>
+      <circle cx="60" cy="5" r="2" fill="#c9a84c" opacity="0.5"/>
+      <circle cx="5" cy="60" r="2" fill="#c9a84c" opacity="0.5"/>
+      <path d="M15 5 L15 20 L5 20" stroke="#c9a84c" stroke-width="0.7" fill="none" opacity="0.4"/>
+    </symbol>
+  </defs>
+</svg>
+
+<!-- ═══ NAV ═══ -->
+<nav>
+  <div class="nav-brand">ATARAH</div>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#events">Events</a></li>
+    <li><a href="#prizes">Prizes</a></li>
+    <li><a href="#dates">Dates</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <div style="display:flex;align-items:center;gap:0.5rem;">
+    <a class="nav-instagram" href="https://www.instagram.com/shanthichurch_youth_fellowship?utm_source=qr&igsh=Z3FmMWowdjRkbm0y" target="_blank" rel="noopener" aria-label="Instagram">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+    </a>
+    <a class="nav-cta" href="https://docs.google.com/forms/d/e/1FAIpQLSfTJR3vgaXLeqHMScotessLqOaCAUqGdUthu6OvkD0Gk_lRcg/viewform" target="_blank" rel="noopener">Register</a>
+  </div>
+</nav>
+
+<!-- ═══ HERO ═══ -->
+<section id="hero">
+  <!-- Corner ornaments -->
+  <svg class="corner tl" viewBox="0 0 140 140"><use href="#corner-svg"/></svg>
+  <svg class="corner tr" viewBox="0 0 140 140"><use href="#corner-svg"/></svg>
+  <svg class="corner bl" viewBox="0 0 140 140"><use href="#corner-svg"/></svg>
+  <svg class="corner br" viewBox="0 0 140 140"><use href="#corner-svg"/></svg>
+
+  <div class="hero-kicker">CSI Shanthi Church Youth Fellowship Presents</div>
+  <div class="hero-subtitle-top">Inter-Church Event &nbsp;·&nbsp; 2026</div>
+
+  <div class="hero-crown">👑</div>
+
+  <div style="position:relative; display:inline-block;">
+    <h1 class="hero-title">ATARAH</h1>
+    <div class="hero-title-glow" aria-hidden="true">ATARAH</div>
+  </div>
+
+  <div class="hero-hr" style="margin-top:0.6rem;"></div>
+  <div class="hero-theme">Crowned With Purpose</div>
+  <div class="hero-hr"></div>
+
+  <div class="hero-date-venue">
+    <div class="dv-item">
+      <div class="dv-label">Event Date</div>
+      <div class="dv-val">11th July 2026</div>
+    </div>
+    <div class="dv-item" style="border-left:1px solid var(--border); padding-left:3rem;">
+      <div class="dv-label">Venue</div>
+      <div class="dv-val">Cathedral High School, Bangalore</div>
+    </div>
+    <div class="dv-item" style="border-left:1px solid var(--border); padding-left:3rem;">
+      <div class="dv-label">Registration Deadline</div>
+      <div class="dv-val">8th July 2026</div>
+    </div>
+  </div>
+
+  <div class="hero-btn-row">
+    <a href="#events" class="btn-primary">Explore Events</a>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfTJR3vgaXLeqHMScotessLqOaCAUqGdUthu6OvkD0Gk_lRcg/viewform" target="_blank" rel="noopener" class="btn-outline">Register Now</a>
+  </div>
+</section>
+
+<!-- ═══ ABOUT ═══ -->
+<section id="about">
+  <div class="sec-label reveal">About</div>
+  <h2 class="sec-title reveal">What is Atarah?</h2>
+  <div class="sec-rule reveal"></div>
+
+  <div class="about-inner">
+    <div class="about-text reveal">
+      <p><strong>Atarah</strong> — the Hebrew word for <strong>Crown</strong> — is a dynamic inter-church event hosted by the <strong>CSI Shanthi Church Youth Fellowship</strong>, bringing together youth aged 16–35 from congregations across Bangalore.</p>
+      <p>Taking place at <strong>Cathedral High School</strong> on <strong>11th July 2026</strong>, Atarah is a platform where faith meets creativity — where every short film, photograph, performance, and spoken word carries the mark of the King.</p>
+      <div class="about-blockquote">
+        "Crowned With Purpose — an invitation to youth to discover, celebrate and express their identity in Christ."
+      </div>
+      <p>With <strong>10 diverse competitions</strong> spanning film, music, spoken word, visual arts, and biblical knowledge, Atarah creates a memorable, faith-filled experience for all who participate. Each event carries <strong>Brownie Points</strong> contributing to the overall church championship score.</p>
+    </div>
+
+    <div class="about-rules reveal reveal-d1">
+      <div class="about-rules">
+        <h3>General Rules &amp; Regulations</h3>
+        <ul class="rule-list">
+          <li>Participants must be between age <strong>16 and 35 years</strong>.</li>
+          <li>Entry forms must be submitted duly attested by the <strong>Presbyter-in-Charge &amp; Youth Representative</strong> on the day of the event.</li>
+          <li>Registration deadline: <strong>8th July 2026</strong>.</li>
+          <li>Participation in each event carries <strong>Brownie Points</strong> for the overall scores.</li>
+          <li>A cash prize of <strong>₹10,000/-</strong> along with Winners &amp; Rolling Trophies will be awarded to the overall champions of ATARAH 2026.</li>
+          <li>Organisers are not responsible for any personal loss or damages during the event.</li>
+          <li>Participants must carry their respective <strong>ID proof</strong>.</li>
+          <li>Registration desk opens at <strong>9:00 AM</strong> — adhere to the event schedule.</li>
+          <li>Participants are requested to follow decorum and respect the school campus.</li>
+          <li>Smoking and alcohol are <strong>strictly prohibited</strong>.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ EVENTS ═══ -->
+<section id="events">
+  <div class="sec-label reveal">Competitions</div>
+  <h2 class="sec-title reveal">Event Categories</h2>
+  <p class="sec-desc reveal">Ten exciting competitions invite participants to explore the theme through diverse creative disciplines. Click "Rules" on each card to expand.</p>
+  <div class="sec-rule reveal"></div>
+
+  <div class="events-grid">
+
+    <!-- GOD IN 180 -->
+    <div class="event-card reveal">
+      <span class="ec-icon">🎬</span>
+      <div class="ec-tag">Visual Storytelling</div>
+      <div class="ec-title">God in 180 — Short Video</div>
+      <p class="ec-desc">Create a compelling short film (max 3 minutes) that creatively explores God and the concept of the Eternal Crown. Professional editing highly encouraged.</p>
+      <div class="ec-meta">
+        <span class="ec-badge">Max 3 mins</span>
+        <span class="ec-badge">MP4 Format</span>
+        <span class="ec-badge">Submit via Email</span>
+      </div>
+      <div class="ec-prize-row">
+        <span class="ec-reg-fee">Reg: ₹800</span>
+        <span class="ec-prize-sep">|</span>
+        <span class="ec-prize-item">🥇 ₹3,000</span>
+        <span class="ec-prize-sep">·</span>
+        <span class="ec-prize-item">🥈 ₹2,000</span>
+      </div>
+      <div class="ec-rules">
+        <button class="ec-rules-toggle" onclick="toggleRules(this)">View Rules <span>▾</span></button>
+        <div class="ec-rules-body">
+          <ul>
+            <li>Film must be <strong>3 minutes or less</strong> including credits.</li>
+            <li>Theme: creatively explore God and the concept of the <strong>Eternal Crown</strong>.</li>
+            <li>Submit in best quality <strong>MP4 format</strong>.</li>
+            <li>Can be a trailer-style teaser or short film narrative.</li>
+            <li><strong>Zero tolerance</strong> for profanity, coarse language or inappropriate imagery.</li>
+            <li>All concepts and ideas must be <strong>original</strong>.</li>
+            <li>Existing or original music may be used (in-house event).</li>
+            <li><strong>Deadline:</strong> Email your video 2 days before the event to <a href="mailto:atarahsc@gmail.com" style="color:var(--gold2)">atarahsc@gmail.com</a>.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- PHOTOGRAPHY -->
+    <div class="event-card reveal reveal-d1">
+      <span class="ec-icon">📸</span>
+      <div class="ec-tag">Visual Arts</div>
+      <div class="ec-title">Psalm-Thing Snap-Tastic! — Photography</div>
+      <p class="ec-desc">Mobile photography competition with a theme given on the spot. Participants have 4 hours to capture, edit and submit their best shot.</p>
+      <div class="ec-meta">
+        <span class="ec-badge">1 per Church</span>
+        <span class="ec-badge">Mobile Only</span>
+        <span class="ec-badge">4 Hour Limit</span>
+      </div>
+      <div class="ec-prize-row">
+        <span class="ec-reg-fee">Reg: ₹500</span>
+        <span class="ec-prize-sep">|</span>
+        <span class="ec-prize-item">🥇 ₹2,000</span>
+        <span class="ec-prize-sep">·</span>
+        <span class="ec-prize-item">🥈 ₹1,000</span>
+      </div>
+      <div class="ec-rules">
+        <button class="ec-rules-toggle" onclick="toggleRules(this)">View Rules <span>▾</span></button>
+        <div class="ec-rules-body">
+          <ul>
+            <li>One entry per church; <strong>one participant</strong>.</li>
+            <li><strong>Mobile photography only</strong>.</li>
+            <li>Theme given on the spot; <strong>4-hour time limit</strong>.</li>
+            <li>Edit photos freely but submit only <strong>one final photo</strong> along with the original.</li>
+            <li><strong>Only colour correction</strong> allowed — no external/3rd party editing apps.</li>
+            <li>Submit via email, file name: <code>Snaptastic_ChurchID</code>, to <a href="mailto:atarahsc@gmail.com" style="color:var(--gold2)">atarahsc@gmail.com</a>.</li>
+            <li>Submit in <strong>JPEG format</strong>.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- REEL MAKING -->
+    <div class="event-card reveal reveal-d2">
+      <span class="ec-icon">🎞️</span>
+      <div class="ec-tag">Digital Media</div>
+      <div class="ec-title">Reel &amp; Reveal — Reel Making</div>
+      <p class="ec-desc">A day-long Instagram Reel creation challenge. Use only in-app effects and features to produce a 30–60 second vertical reel with Christian music.</p>
+      <div class="ec-meta">
+        <span class="ec-badge">Team of 2</span>
+        <span class="ec-badge">30–60 Seconds</span>
+        <span class="ec-badge">Instagram Only</span>
+      </div>
+      <div class="ec-prize-row">
+        <span class="ec-reg-fee">Reg: ₹500</span>
+        <span class="ec-prize-sep">|</span>
+        <span class="ec-prize-item">🥇 ₹2,000</span>
+        <span class="ec-prize-sep">·</span>
+        <span class="ec-prize-item">🥈 ₹1,000</span>
+      </div>
+      <div class="ec-rules">
+        <button class="ec-rules-toggle" onclick="toggleRules(this)">View Rules <span>▾</span></button>
+        <div class="ec-rules-body">
+          <ul>
+            <li>One team per church, <strong>consisting of two participants</strong>.</li>
+            <li>Record on the <strong>Instagram Reel platform only</strong>.</li>
+            <li>Day-long event; theme given on the spot.</li>
+            <li>Music must be added; use only <strong>Instagram's effects and features</strong>. External editing software leads to disqualification.</li>
+            <li>Duration: <strong>30–60 seconds</strong>, vertical reel format.</li>
+            <li>Music: <strong>Christian songs / instrumentals / voiceover</strong>. Secular or trance music not allowed.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- QUIZ -->
+    <div class="event-card reveal">
+      <span class="ec-icon">📖</span>
+      <div class="ec-tag">Biblical Knowledge</div>
+      <div class="ec-title">Crown of Wisdom — Bible Quiz</div>
+      <p class="ec-desc">Teams of 3 test their biblical knowledge across preliminary and main rounds. Main portions: Books of Samuel and Book of Revelation.</p>
+      <div class="ec-meta">
+        <span class="ec-badge">Team of 3</span>
+        <span class="ec-badge">NIV / BSI Kannada</span>
+        <span class="ec-badge">2 Rounds</span>
+      </div>
+      <div class="ec-prize-row">
+        <span class="ec-reg-fee">Reg: ₹800</span>
+        <span class="ec-prize-sep">|</span>
+        <span class="ec-prize-item">🥇 ₹3,000</span>
+        <span class="ec-prize-sep">·</span>
+        <span class="ec-prize-item">🥈 ₹2,000</span>
+      </div>
+      <div class="ec-rules">
+        <button class="ec-rules-toggle" onclick="toggleRules(this)">View Rules <span>▾</span></button>
+        <div class="ec-rules-body">
+          <ul>
+            <li>One team per church; <strong>3 participants</strong> per team.</li>
+            <li><strong>Preliminary Round:</strong> Entire General Bible (Old &amp; New Testament).</li>
+            <li><strong>Main Round:</strong> Books of Samuel &amp; Book of Revelation.</li>
+            <li>English: <strong>NIV (New International Version)</strong>.</li>
+            <li>Kannada: <strong>BSI Kannada Version</strong> (Bible Society of India).</li>
+            <li>The quiz master's decision is final.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- POTPOURRI -->
+    <div class="event-card reveal reveal-d1">
+      <span class="ec-icon">🎯</span>
+      <div class="ec-tag">Fun & Games</div>
+      <div class="ec-title">Kingdom Kaleidoscope — Potpourri</div>
+      <p class="ec-desc">Three fun rounds: Dumb Charades, Rapid Fire, and Pictionary — all based on Bible events, places, and general biblical knowledge.</p>
+      <div class="ec-meta">
+        <span class="ec-badge">Team of 3</span>
+        <span class="ec-badge">3 Rounds</span>
+      </div>
+      <div class="ec-prize-row">
+        <span class="ec-reg-fee">Reg: ₹800</span>
+        <span class="ec-prize-sep">|</span>
+        <span class="ec-prize-item">🥇 ₹3,000</span>
+        <span class="ec-prize-sep">·</span>
+        <span class="ec-prize-item">🥈 ₹2,000</span>
+      </div>
+      <div class="ec-rules">
+        <button class="ec-rules-toggle" onclick="toggleRules(this)">View Rules <span>▾</span></button>
+        <div class="ec-rules-body">
+          <ul>
+            <li>One entry per church; <strong>3 participants</strong>.</li>
+            <li>Three rounds: <strong>Dumb Charades, Rapid Fire, Pictionary</strong>.</li>
+            <li>Knowledge of Bible events, places, and general biblical content required.</li>
+            <li>Adherence to time limits is crucial.</li>
+            <li>If many registrations, a preliminary round will be held.</li>
+            <li>Event Coordinator's decisions are final.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- RULE THE MIC -->
+    <div class="event-card reveal reveal-d2">
+      <span class="ec-icon">🎤</span>
+      <div class="ec-tag">Spoken Word</div>
+      <div class="ec-title">Rule the Mic — Pick &amp; Speak</div>
+      <p class="ec-desc">Pick a random gospel topic, take 30 seconds to think, then speak for 1 minute. Personal testimony, preaching, spoken word, or reflection — all welcome.</p>
+      <div class="ec-meta">
+        <span class="ec-badge">1 min Speech</span>
+        <span class="ec-badge">Gospel Topics</span>
+      </div>
+      <div class="ec-prize-row">
+        <span class="ec-reg-fee">Reg: ₹500</span>
+        <span class="ec-prize-sep">|</span>
+        <span class="ec-prize-item">🥇 ₹2,000</span>
+        <span class="ec-prize-sep">·</span>
+        <span class="ec-prize-item">🥈 ₹1,000</span>
+      </div>
+      <div class="ec-rules">
+        <button class="ec-rules-toggle" onclick="toggleRules(this)">View Rules <span>▾</span></button>
+        <div class="ec-rules-body">
+          <ul>
+            <li>Each participant picks a <strong>random topic</strong> (toss system).</li>
+            <li><strong>30 seconds</strong> to prepare.</li>
+            <li>Speak for <strong>exactly 1 minute</strong> (strict timing).</li>
+            <li>Content must relate to the <strong>Gospel / Jesus / Christian life</strong>.</li>
+            <li>Accepted formats: personal testimony, short preaching, spoken word, reflection, encouragement.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- FACE PAINTING -->
+    <div class="event-card reveal">
+      <span class="ec-icon">🎨</span>
+      <div class="ec-tag">Creative Arts</div>
+      <div class="ec-title">Holy Makeover Studio — Face Painting</div>
+      <p class="ec-desc">Participants bring their own artist and subject. Theme given on the spot; 90 minutes to create. Each participant presents their work to the judge for 2 minutes.</p>
+      <div class="ec-meta">
+        <span class="ec-badge">1 per Church</span>
+        <span class="ec-badge">90 Min Limit</span>
+        <span class="ec-badge">Own Materials</span>
+      </div>
+      <div class="ec-prize-row">
+        <span class="ec-reg-fee">Reg: ₹500</span>
+        <span class="ec-prize-sep">|</span>
+        <span class="ec-prize-item">🥇 ₹2,000</span>
+        <span class="ec-prize-sep">·</span>
+        <span class="ec-prize-item">🥈 ₹1,000</span>
+      </div>
+      <div class="ec-rules">
+        <button class="ec-rules-toggle" onclick="toggleRules(this)">View Rules <span>▾</span></button>
+        <div class="ec-rules-body">
+          <ul>
+            <li>One entry per church; <strong>1 artist + 1 subject</strong>.</li>
+            <li>Theme given on the spot; <strong>90-minute time limit</strong>.</li>
+            <li>Participants bring their <strong>own stationery and subject</strong>.</li>
+            <li>Painting must adhere to the given theme.</li>
+            <li><strong>No phones allowed</strong> in the painting hall (leads to disqualification).</li>
+            <li>Each participant gets <strong>2 minutes to explain</strong> their painting to the judge.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- STREET PLAY -->
+    <div class="event-card reveal reveal-d1">
+      <span class="ec-icon">🎭</span>
+      <div class="ec-tag">Performing Arts</div>
+      <div class="ec-title">Rule the Streets — Street Play</div>
+      <p class="ec-desc">Raw, impactful street-play performances connecting to the Gospel and the theme of Atarah — Reign, Crown, Kingdom, and Authority of Christ.</p>
+      <div class="ec-meta">
+        <span class="ec-badge">8–12 Minutes</span>
+        <span class="ec-badge">Minimal Props</span>
+      </div>
+      <div class="ec-prize-row">
+        <span class="ec-reg-fee">Reg: ₹800</span>
+        <span class="ec-prize-sep">|</span>
+        <span class="ec-prize-item">🥇 ₹3,000</span>
+        <span class="ec-prize-sep">·</span>
+        <span class="ec-prize-item">🥈 ₹2,000</span>
+      </div>
+      <div class="ec-rules">
+        <button class="ec-rules-toggle" onclick="toggleRules(this)">View Rules <span>▾</span></button>
+        <div class="ec-rules-body">
+          <ul>
+            <li>Team performs a <strong>street-play style act</strong>.</li>
+            <li>Duration: <strong>8–12 minutes</strong> (strict timing).</li>
+            <li>Must connect to: Gospel/Jesus, Redemption, Identity in Christ, Christian values.</li>
+            <li>Theme must reflect <strong>Atarah: Reign / Crown / Kingdom / Authority of Christ</strong>.</li>
+            <li><strong>Minimal props</strong> — no elaborate stage setup.</li>
+            <li>No inappropriate language, gestures, or direct attacks on other religions.</li>
+            <li>Message must be clear and understandable.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- SOLO SINGING -->
+    <div class="event-card reveal reveal-d2">
+      <span class="ec-icon">🎵</span>
+      <div class="ec-tag">Music</div>
+      <div class="ec-title">One Voice, One Faith — Solo Singing</div>
+      <p class="ec-desc">Two categories: Western (English) and Vernacular. Contemporary Christian, Gospel, Hymns and Worship songs. Backing tracks allowed. Max 5 minutes.</p>
+      <div class="ec-meta">
+        <span class="ec-badge">5 Min Limit</span>
+        <span class="ec-badge">Category A &amp; B</span>
+        <span class="ec-badge">MP3 on USB</span>
+      </div>
+      <div class="ec-prize-row">
+        <span class="ec-reg-fee">Reg: ₹500</span>
+        <span class="ec-prize-sep">|</span>
+        <span class="ec-prize-item">🥇 ₹2,000</span>
+        <span class="ec-prize-sep">·</span>
+        <span class="ec-prize-item">🥈 ₹1,000</span>
+      </div>
+      <div class="ec-rules">
+        <button class="ec-rules-toggle" onclick="toggleRules(this)">View Rules <span>▾</span></button>
+        <div class="ec-rules-body">
+          <ul>
+            <li><strong>Category A – Western (English):</strong> Contemporary Christian, Gospel, Hymns, Worship. Backing tracks/karaoke allowed. One instrument if no track.</li>
+            <li><strong>Category B – Vernacular:</strong> Regional language (Kannada, Tamil, Hindi, Malayalam, etc.) Christian devotional, Gospel, Hymns. Backing tracks allowed.</li>
+            <li>Time limit: <strong>5 minutes</strong>. Exceeding results in negative points.</li>
+            <li>Submit backing track as <strong>MP3 on USB</strong> before the event.</li>
+            <li><strong>No last-minute song changes</strong>.</li>
+            <li><strong>Lip-syncing strictly prohibited</strong>.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- GROUP SINGING -->
+    <div class="event-card reveal">
+      <span class="ec-icon">🎸</span>
+      <div class="ec-tag">Battle of the Bands</div>
+      <div class="ec-title">Crowned in Harmony — Group Singing</div>
+      <p class="ec-desc">Theme: "The Crowned King" — Rev 19:12, 16. Groups of 4–10 perform; bring your own instruments. Acoustic drum kit provided. 4+2 minutes.</p>
+      <div class="ec-meta">
+        <span class="ec-badge">4–10 Members</span>
+        <span class="ec-badge">4+2 Minutes</span>
+        <span class="ec-badge">Own Instruments</span>
+      </div>
+      <div class="ec-prize-row">
+        <span class="ec-reg-fee">Reg: ₹1,000</span>
+        <span class="ec-prize-sep">|</span>
+        <span class="ec-prize-item">🥇 ₹4,000</span>
+        <span class="ec-prize-sep">·</span>
+        <span class="ec-prize-item">🥈 ₹3,000</span>
+      </div>
+      <div class="ec-rules">
+        <button class="ec-rules-toggle" onclick="toggleRules(this)">View Rules <span>▾</span></button>
+        <div class="ec-rules-body">
+          <ul>
+            <li>One entry per church.</li>
+            <li><strong>Minimum 4, Maximum 10 participants</strong>.</li>
+            <li>Participants to bring their own instruments.</li>
+            <li><strong>Acoustic drum kit</strong> will be provided.</li>
+            <li>Time duration: <strong>4+2 minutes</strong>.</li>
+            <li>Theme: <em>"The Crowned King"</em> — Revelation 19:12, 16 — <em>"On his head were many crowns… Name written 'King of kings and Lord of lords'"</em>.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══ THEME ═══ -->
+<section id="theme">
+  <div class="sec-label reveal">Central Theme</div>
+  <h2 class="sec-title reveal">The Heart of Atarah</h2>
+  <div class="sec-rule reveal"></div>
+
+  <div class="theme-frame reveal">
+    <div class="theme-meaning">✦ &nbsp; Hebrew: עֲטָרָה &nbsp; ✦</div>
+    <div class="theme-word">Crowned With Purpose</div>
+    <div class="hero-hr" style="margin:1rem auto;"></div>
+    <p class="theme-verse">
+      "You will be a crown of splendour in the Lord's hand,<br>a royal diadem in the hand of your God."
+    </p>
+    <span class="theme-verse-ref">— Isaiah 62:3</span>
+    <p class="theme-desc">
+      <strong style="color:var(--gold2)">Atarah</strong> — the Hebrew word for Crown — is more than a competition title. It is an identity declaration. Every event, every performance, every creative work is an act of worship and testimony, rooted in the truth that those who follow Christ are <strong style="color:var(--gold2)">Crowned With Purpose</strong>. Participants are invited to infuse their talents with this conviction, creating work that is both artistically excellent and spiritually meaningful.
+    </p>
+  </div>
+</section>
+
+<!-- ═══ PRIZES ═══ -->
+<section id="prizes">
+  <div class="sec-label reveal">Awards</div>
+  <h2 class="sec-title reveal">Cash Prizes &amp; Trophies</h2>
+  <div class="sec-rule reveal"></div>
+
+  <!-- Overall prizes -->
+  <div class="prizes-wrap">
+    <div class="prize-card winner reveal">
+      <div style="height:1.5rem;"></div>
+      <span class="prize-icon">🏆</span>
+      <div class="prize-amount g">₹10,000</div>
+      <div class="prize-label">Overall Winners</div>
+      <p class="prize-desc">Winners Trophy<br>+ Rolling Trophy<br>+ Certificate of Excellence</p>
+    </div>
+    <div class="prize-card reveal reveal-d1">
+      <span class="prize-icon">🥈</span>
+      <div class="prize-amount s">₹8,000</div>
+      <div class="prize-label">Overall Runners-Up</div>
+      <p class="prize-desc">Runners-Up Trophy<br>+ Certificate of Merit</p>
+    </div>
+  </div>
+
+  <!-- Scoring System -->
+  <div class="scoring-section reveal" style="max-width:760px; margin:3rem auto 0;">
+    <div class="scoring-title">General Scoring System</div>
+    <table class="scoring-table">
+      <thead>
+        <tr>
+          <th>Event</th>
+          <th>Winner</th>
+          <th>Runner-Up</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>God in 180 (Short Video)</td><td>10 pts</td><td>5 pts</td></tr>
+        <tr><td>Crown of Wisdom (Quiz)</td><td>10 pts</td><td>5 pts</td></tr>
+        <tr><td>Kingdom Kaleidoscope (Potpourri)</td><td>10 pts</td><td>5 pts</td></tr>
+        <tr><td>Holy Makeover Studio (Face Paint)</td><td>10 pts</td><td>5 pts</td></tr>
+        <tr><td>Rule the Mic (Pick &amp; Speak)</td><td>10 pts</td><td>5 pts</td></tr>
+        <tr><td>Rule the Streets (Street Play)</td><td>10 pts</td><td>5 pts</td></tr>
+        <tr><td>One Voice, One Faith (Solo Singing)</td><td>10 pts</td><td>5 pts</td></tr>
+        <tr><td>Crowned in Harmony (Group Singing)</td><td>10 pts</td><td>5 pts</td></tr>
+        <tr><td>Psalm-thing Snap-tastic (Photography)</td><td>10 pts</td><td>5 pts</td></tr>
+        <tr><td>Reel &amp; Reveal (Reel Making)</td><td>10 pts</td><td>5 pts</td></tr>
+        <tr class="brownie-row"><td colspan="3">✦ &nbsp; 1 Brownie Point awarded for participation in every event &nbsp; ✦</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Per-event cash prizes -->
+  <div class="per-event-prizes reveal" style="max-width:900px; margin:3rem auto 0;">
+    <div class="scoring-title">Event Cash Prizes</div>
+    <div class="event-prizes-grid">
+      <div class="ep-card">
+        <div class="ep-event">🎬 God in 180</div>
+        <div class="ep-row"><span class="ep-place gold-place">🥇 1st</span><span class="ep-amt">₹3,000</span></div>
+        <div class="ep-row"><span class="ep-place silver-place">🥈 2nd</span><span class="ep-amt">₹2,000</span></div>
+      </div>
+      <div class="ep-card">
+        <div class="ep-event">📖 Crown of Wisdom</div>
+        <div class="ep-row"><span class="ep-place gold-place">🥇 1st</span><span class="ep-amt">₹3,000</span></div>
+        <div class="ep-row"><span class="ep-place silver-place">🥈 2nd</span><span class="ep-amt">₹2,000</span></div>
+      </div>
+      <div class="ep-card">
+        <div class="ep-event">🎯 Kingdom Kaleidoscope</div>
+        <div class="ep-row"><span class="ep-place gold-place">🥇 1st</span><span class="ep-amt">₹3,000</span></div>
+        <div class="ep-row"><span class="ep-place silver-place">🥈 2nd</span><span class="ep-amt">₹2,000</span></div>
+      </div>
+      <div class="ep-card">
+        <div class="ep-event">🎭 Rule the Streets</div>
+        <div class="ep-row"><span class="ep-place gold-place">🥇 1st</span><span class="ep-amt">₹3,000</span></div>
+        <div class="ep-row"><span class="ep-place silver-place">🥈 2nd</span><span class="ep-amt">₹2,000</span></div>
+      </div>
+      <div class="ep-card ep-featured">
+        <div class="ep-event">🎸 Crowned in Harmony</div>
+        <div class="ep-row"><span class="ep-place gold-place">🥇 1st</span><span class="ep-amt">₹4,000</span></div>
+        <div class="ep-row"><span class="ep-place silver-place">🥈 2nd</span><span class="ep-amt">₹3,000</span></div>
+      </div>
+      <div class="ep-card">
+        <div class="ep-event">🎨 Holy Makeover Studio</div>
+        <div class="ep-row"><span class="ep-place gold-place">🥇 1st</span><span class="ep-amt">₹2,000</span></div>
+        <div class="ep-row"><span class="ep-place silver-place">🥈 2nd</span><span class="ep-amt">₹1,000</span></div>
+      </div>
+      <div class="ep-card">
+        <div class="ep-event">🎤 Rule the Mic</div>
+        <div class="ep-row"><span class="ep-place gold-place">🥇 1st</span><span class="ep-amt">₹2,000</span></div>
+        <div class="ep-row"><span class="ep-place silver-place">🥈 2nd</span><span class="ep-amt">₹1,000</span></div>
+      </div>
+      <div class="ep-card">
+        <div class="ep-event">🎵 One Voice, One Faith</div>
+        <div class="ep-row"><span class="ep-place gold-place">🥇 1st</span><span class="ep-amt">₹2,000</span></div>
+        <div class="ep-row"><span class="ep-place silver-place">🥈 2nd</span><span class="ep-amt">₹1,000</span></div>
+      </div>
+      <div class="ep-card">
+        <div class="ep-event">📸 Psalm-thing Snap-tastic</div>
+        <div class="ep-row"><span class="ep-place gold-place">🥇 1st</span><span class="ep-amt">₹2,000</span></div>
+        <div class="ep-row"><span class="ep-place silver-place">🥈 2nd</span><span class="ep-amt">₹1,000</span></div>
+      </div>
+      <div class="ep-card">
+        <div class="ep-event">🎞️ Reel &amp; Reveal</div>
+        <div class="ep-row"><span class="ep-place gold-place">🥇 1st</span><span class="ep-amt">₹2,000</span></div>
+        <div class="ep-row"><span class="ep-place silver-place">🥈 2nd</span><span class="ep-amt">₹1,000</span></div>
+      </div>
+    </div>
+  </div>
+
+  <p class="prize-note reveal" style="margin-top:2.5rem; max-width:640px; margin-left:auto; margin-right:auto;">
+    <strong>Brownie Points</strong> are awarded for participation in every event and contribute to the overall championship score. The church accumulating the highest overall points wins the title of <strong>Overall Champion of Atarah 2026</strong>, taking home ₹10,000, the Winners Trophy, and the Rolling Trophy.
+  </p>
+</section>
+
+<!-- ═══ IMPORTANT DATES ═══ -->
+<section id="dates">
+  <div class="sec-label reveal">Schedule</div>
+  <h2 class="sec-title reveal">Important Dates</h2>
+  <div class="sec-rule reveal"></div>
+
+  <div class="dates-inner">
+    <div class="timeline">
+      <div class="tl-item reveal">
+        <div class="tl-dot"></div>
+        <div class="tl-date">Now Open</div>
+        <div class="tl-title">Registrations Open</div>
+        <p class="tl-desc">Entry forms are now open. Submit your form duly attested by your Presbyter-in-Charge and Youth Representative.</p>
+      </div>
+      <div class="tl-item reveal reveal-d1">
+        <div class="tl-dot"></div>
+        <div class="tl-date">8th July 2026</div>
+        <div class="tl-title">Registration Deadline</div>
+        <p class="tl-desc">Last date to register for all events. Ensure your entry form is submitted before this date. No late entries accepted.</p>
+      </div>
+      <div class="tl-item reveal reveal-d2">
+        <div class="tl-dot"></div>
+        <div class="tl-date">9th July 2026</div>
+        <div class="tl-title">Short Video Submission Deadline</div>
+        <p class="tl-desc">God in 180 participants must email their MP4 video to atarahsc@gmail.com two days before the main event.</p>
+      </div>
+      <div class="tl-item reveal reveal-d3">
+        <div class="tl-dot"></div>
+        <div class="tl-date">11th July 2026</div>
+        <div class="tl-title">Event Day — ATARAH 2026</div>
+        <p class="tl-desc">An all-day event featuring competitions, performances, exciting stalls, and prize ceremony. Cathedral High School, Bangalore. Carry valid ID proof.</p>
+      </div>
+      <div class="tl-item reveal reveal-d4" style="margin-top:1.5rem; padding-left:2rem;">
+        <div class="tl-dot" style="background:var(--gold-dim);"></div>
+        <div class="tl-date" style="color:var(--muted); font-size:0.6rem;">Day Schedule</div>
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:0.3rem 1.5rem; margin-top:0.4rem;">
+          <div class="sched-row"><span class="sched-time">9:00 AM</span><span class="sched-ev">Registration</span></div>
+          <div class="sched-row"><span class="sched-time">10:00 AM</span><span class="sched-ev">Inauguration</span></div>
+          <div class="sched-row"><span class="sched-time">11:00 AM</span><span class="sched-ev">Quiz &amp; Potpourri</span></div>
+          <div class="sched-row"><span class="sched-time">12:30 PM</span><span class="sched-ev">Pick &amp; Speak / Face Paint</span></div>
+          <div class="sched-row"><span class="sched-time">1:30 PM</span><span class="sched-ev">Lunch</span></div>
+          <div class="sched-row"><span class="sched-time">2:00 PM</span><span class="sched-ev">Street Play</span></div>
+          <div class="sched-row"><span class="sched-time">3:00 PM</span><span class="sched-ev">Solo / Group Singing</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CONTACT / REGISTER ═══ -->
+<section id="contact">
+  <div class="sec-label reveal">Contact &amp; Register</div>
+  <h2 class="sec-title reveal">Get in Touch</h2>
+  <div class="sec-rule reveal"></div>
+
+  <div class="contact-inner">
+    <div class="contact-grid reveal">
+      <div class="contact-card">
+        <span class="cc-icon">📞</span>
+        <div class="cc-name">Alex Solomon</div>
+        <div class="cc-phone"><a href="tel:+919731310773">+91 97313 10773</a></div>
+      </div>
+      <div class="contact-card">
+        <span class="cc-icon">📞</span>
+        <div class="cc-name">Albert Moses</div>
+        <div class="cc-phone"><a href="tel:+917760536554">+91 77605 36554</a></div>
+      </div>
+      <div class="contact-card">
+        <span class="cc-icon">📞</span>
+        <div class="cc-name">Diya Jafita Maben</div>
+        <div class="cc-phone"><a href="tel:+918050369584">+91 80503 69584</a></div>
+      </div>
+    </div>
+
+    <div class="email-row reveal">
+      📧 &nbsp; Email: <a href="mailto:atarahsc@gmail.com">atarahsc@gmail.com</a>
+    </div>
+
+    <div class="registration-note reveal">
+      <strong>How to Register:</strong><br>
+      Complete your entry form and have it duly attested by your <strong>Presbyter-in-Charge &amp; Youth Representative</strong>. Submit the form before the deadline of <strong>8th July 2026</strong>. Contact any of the coordinators above or email us for the registration form. Each church may enter one team per event.
+      <br><br>
+      <span style="color:var(--gold2);"><strong>Bundle Offer:</strong> Register for all 10 events together for just <strong>₹5,000</strong>.</span> Individual event fees range from ₹500–₹1,000 (shown on each event card).
+    </div>
+
+    <div class="reveal" style="text-align:center; margin-top:2.5rem;">
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSfTJR3vgaXLeqHMScotessLqOaCAUqGdUthu6OvkD0Gk_lRcg/viewform" target="_blank" rel="noopener" class="btn-primary" style="display:inline-block; font-size:0.82rem; padding:1rem 3rem; letter-spacing:0.25em;">
+        📋 &nbsp; Register Here
+      </a>
+      <p style="margin-top:1rem; font-size:0.82rem; color:var(--muted); font-family:'Cinzel',serif; letter-spacing:0.1em;">Opens Google Form · Deadline 8th July 2026</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
+<footer>
+  <div class="footer-logo">ATARAH 2026</div>
+  <div class="footer-tagline">Crowned With Purpose</div>
+  <div class="footer-social">
+    <a href="https://www.instagram.com/shanthichurch_youth_fellowship?utm_source=qr&igsh=Z3FmMWowdjRkbm0y" target="_blank" rel="noopener">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+      Follow Us on Instagram
+    </a>
+  </div>
+  <div class="footer-hr"></div>
+  <div class="footer-copy">
+    CSI Shanthi Church Youth Fellowship &nbsp;·&nbsp; Cathedral High School, Bangalore<br>
+    11th July 2026 &nbsp;·&nbsp; atarahsc@gmail.com<br><br>
+    <span style="font-size:0.75rem; opacity:0.5;">"On his head were many crowns… King of kings and Lord of lords" — Revelation 19:12, 16</span>
+  </div>
+</footer>
+
+<script>
+/* ─── RULES TOGGLE ─── */
+function toggleRules(btn) {
+  const body = btn.nextElementSibling;
+  const arrow = btn.querySelector('span');
+  const open = body.classList.toggle('open');
+  arrow.textContent = open ? '▴' : '▾';
+}
+
+/* ─── SCROLL REVEAL ─── */
+const revealEls = document.querySelectorAll('.reveal');
+const io = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+  });
+}, { threshold: 0.1 });
+revealEls.forEach(el => io.observe(el));
+
+/* ─── NAV BACKGROUND ON SCROLL ─── */
+const nav = document.querySelector('nav');
+window.addEventListener('scroll', () => {
+  nav.style.background = window.scrollY > 60
+    ? 'rgba(6,21,16,0.97)'
+    : 'linear-gradient(to bottom, rgba(6,21,16,0.97) 0%, rgba(6,21,16,0) 100%)';
+  nav.style.borderBottom = window.scrollY > 60
+    ? '1px solid rgba(201,168,76,0.25)'
+    : '1px solid rgba(201,168,76,0.1)';
+});
+
+/* ─── SUBTLE PARALLAX ON HERO CROWN ─── */
+const crown = document.querySelector('.hero-crown');
+window.addEventListener('scroll', () => {
+  const y = window.scrollY;
+  if (y < window.innerHeight) {
+    crown.style.transform = `translateY(${y * 0.12}px)`;
+  }
+});
+</script>
+</body>
+</html>
